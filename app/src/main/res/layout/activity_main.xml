@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:andorid="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alwaysDrawnWithCache="false"
+    tools:context=".activity.CounterActivity"
+    tools:ignore="NamespaceTypo">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="+ + COUNTER + +"
+        android:textColor="@color/teal_200"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/counterValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="70sp"
+        andorid:layout_constraintHorizontal_bias="5598"
+        andorid:layout_constraintVertical_bias="0.30"
+        app:layout_constraintBottom_toTopOf="@id/valueToIncrement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:ignore="MissingConstraints,UnknownId" />
+
+    <EditText
+        android:id="@+id/valueToIncrement"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="24dp"
+        android:hint="value"
+        android:singleLine="false"
+        android:textColor="@color/teal_700"
+        android:textColorHighlight="@color/teal_700"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        andorid:inputType="number"
+        andorid:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/resetButton"
+        app:layout_constraintEnd_toStartOf="@id/incrementButton"
+        app:layout_constraintStart_toEndOf="@id/decrementButton" />
+
+    <Button
+        android:id="@+id/incrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="85dp"
+        android:text="Increment"
+        android:textColorHighlight="@color/teal_700"
+        android:textColorHint="@color/teal_700"
+        android:textColorLink="@color/teal_200"
+        app:layout_constraintBottom_toTopOf="@id/resetButton"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,UnknownId" />
+
+    <Button
+        android:id="@+id/decrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="85dp"
+        android:text="Decrement"
+        app:layout_constraintBottom_toTopOf="@id/resetButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints,UnknownId" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="250dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,UnknownId" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

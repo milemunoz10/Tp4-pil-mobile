@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">pil-mobile-basics</string>
+    <string name="decrementBtn">decrement</string>
+    <string name="incrementBtn">increment</string>
+    <string name="insertValue">insertValue</string>
+    <string name="counter">counter</string>
+</resources>

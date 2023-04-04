@@ -1,12 +1,14 @@
 package com.example.pil_mobile_basics.mvp.presenter
 
-import com.example.pil_mobile_basics.mvp.contract.Contract
 
-class Presenter (
-    private val model: Contract.Model, 
-    private val view: Contract.View):
+import com.example.pil_mobile_basics.mvp.contract.CounterContract
 
-    Contract.Presenter{
+class CounterPresenter(
+    private val model: CounterContract.Model,
+    private val view: CounterContract.View
+):
+
+    CounterContract.Presenter{
 
     init {
             view.onIncrementClicked { onIncrementClicked() }
@@ -35,6 +37,10 @@ class Presenter (
                 model.decrementCounter()
                 view.showCounterValue(model.getCounterValue())
             }
+    }
+
+    override fun onDecrementClicked() {
+        TODO("Not yet implemented")
     }
 
     override fun onResetClicked() {

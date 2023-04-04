@@ -1,8 +1,8 @@
 package com.example.pil_mobile_basics.mvp.model
 
-import com.example.pil_mobile_basics.mvp.contract.Contract
+import com.example.pil_mobile_basics.mvp.contract.CounterContract
 
-class Model : Contract.Model {
+class CounterModel : CounterContract.Model {
     private var counterValue = 0
 
     override fun getCounterValue() : String = counterValue.toString()

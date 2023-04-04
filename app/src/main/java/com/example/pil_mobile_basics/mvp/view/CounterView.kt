@@ -1,11 +1,10 @@
 package com.example.pil_mobile_basics.mvp.view
 
 import android.app.Activity
-import com.example.pil_mobile_basics.mvp.contract.Contract
-import com.example.pil_mobile_basics.databinding.ActivityMainBinding
-import com.example.pil_mobile_basics.mvp.view.ActivityView
+import com.example.pil_mobile_basics.mvp.contract.CounterContract
+import com.example.pil_mobile_basics.mvp.view.base.ActivityView
 
-class View (activity: Activity) : ActivityView(activity), Contract.View {
+class CounterView(activity: Activity) : ActivityView(activity), CounterContract.View {
     private var binding: ActivityMainBinding =
         ActivityMainBinding.inflate(activity.layoutInflater)
 

@@ -1,6 +1,6 @@
 package com.example.pil_mobile_basics.mvp.contract
 
-interface Contract {
+interface CounterContract {
     interface View{
         fun showCounterValue(value: String)
         fun onIncrementClicked(function: () -> Unit)
@@ -16,6 +16,7 @@ interface Contract {
         fun onDecrementClicked(value: String)
         fun onResetClicked()
         fun onIncrementClicked()
+        fun onDecrementClicked()
     }
 
     interface Model{

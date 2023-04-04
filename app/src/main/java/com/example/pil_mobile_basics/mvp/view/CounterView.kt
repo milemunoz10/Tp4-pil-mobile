@@ -1,6 +1,7 @@
 package com.example.pil_mobile_basics.mvp.view
 
 import android.app.Activity
+import com.example.pil_mobile_basics.databinding.ActivityMainBinding
 import com.example.pil_mobile_basics.mvp.contract.CounterContract
 import com.example.pil_mobile_basics.mvp.view.base.ActivityView
 
@@ -13,7 +14,7 @@ class CounterView(activity: Activity) : ActivityView(activity), CounterContract.
     }
 
     override fun showCounterValue(value: String) {
-        binding.value.text = value
+        binding.valueToIncrement.text = value
     }
 
     override fun onIncrementClicked(onClick: ()-> Unit){
@@ -27,16 +28,16 @@ class CounterView(activity: Activity) : ActivityView(activity), CounterContract.
         binding.resetButton.setOnClickListener {(onClick())}
     }
 
-    override fun valueIsEmpty() : Boolean {
-        binding.inserText.text.isBlank()
+    override fun valueIsEmpty(): Boolean {
+        binding.valueToIncrement.text.isBlank()
     }
 
     override fun getEmptyError(){
-        binding.inputNumber.error = "Complete"
+        binding.valueToIncrement.error = "Complete"
     }
 
     override fun clear(){
-        binding.inputNumber.text.clear()
+        binding.valueToIncrement.text.clear()
     }
 }
 
